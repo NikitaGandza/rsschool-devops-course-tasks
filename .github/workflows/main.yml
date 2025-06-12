@@ -38,5 +38,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: terraform_format
-        uses: terraform fmt -check
+      - name: Checkout
+        uses: actions/checkout@v4
