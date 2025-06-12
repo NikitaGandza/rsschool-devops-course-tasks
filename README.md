@@ -7,4 +7,6 @@ AWS and Terraform versions <br/>
 <br/>
 AWS non-root account with MFA enabled and secrets generated <br/>
 <img width="1135" alt="Screenshot 2025-06-11 at 22 10 22" src="https://github.com/user-attachments/assets/4fab5c17-b323-478c-94ef-6d989630e6f3" />
-
+<br/>
+<br/>
+### GitHUb Actions
