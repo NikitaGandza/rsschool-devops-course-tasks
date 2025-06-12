@@ -14,10 +14,10 @@ AWS non-root account with MFA enabled and secrets generated <br/>
 <br/>
 Create an AWS account(root user) <br/>
 Create a non-root user with necessary permissions <br/>
-Create a role ```GithubActionsRole``` with necessary permissions <br/>
-Ceate identity provider (OIDC provider) - ```token.actions.githubusercontent.com``` and assign it to the role - ```GithubActionsRole``` <br/>
+Create a role `GithubActionsRole` with necessary permissions <br/>
+Ceate identity provider (OIDC provider) - `token.actions.githubusercontent.com` and assign it to the role - `GithubActionsRole` <br/>
 NOTE! Updated thumbnail in Endpoint verification from this link: https://github.blog/changelog/2022-01-13-github-actions-update-on-oidc-based-deployments-to-aws/ <br/>
-
+Create S3 bucket `terraform-states-nikita`
 <br/>
 To understand more about how to connect Github and AWS, I've used this [article] (https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/) <br/>
 
