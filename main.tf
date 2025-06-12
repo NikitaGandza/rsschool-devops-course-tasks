@@ -1,3 +1,8 @@
+provider "aws" {
+  alias  = "eu-north-1"
+  region = "eu-north-1"
+}
+
 terraform {
   required_providers {
     aws = {
@@ -14,3 +19,9 @@ terraform {
     dynamodb_table = "terrform-state"
   }
 }
+
+resource "aws_s3_bucket" "my_dummy_bucket" {
+  bucket = "dummy-bucket-nikita"
+}
+
+
