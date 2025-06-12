@@ -3,15 +3,8 @@
 ## Task 1 <br/>
 ### Install AWS CLI and Terraform <br/>
 AWS and Terraform versions <br/>
-<img width="438" alt="Screenshot 2025-06-11 at 22 03 10" src="https://github.com/user-attachments/assets/1799d076-e5a2-4069-8683-fe919efe09dc" />
-<br/>
-<br/>
-AWS non-root account with MFA enabled and secrets generated <br/>
-<img width="1135" alt="Screenshot 2025-06-11 at 22 10 22" src="https://github.com/user-attachments/assets/4fab5c17-b323-478c-94ef-6d989630e6f3" />
-<br/>
-<br/>
-### AWS setup
-<br/>
+<img width="438" alt="Screenshot 2025-06-11 at 22 03 10" src="https://github.com/user-attachments/assets/1799d076-e5a2-4069-8683-fe919efe09dc" /> <br/>
+### AWS setup <br/>
 Create an AWS account(root user) <br/>
 Create a non-root user with necessary permissions <br/>
 Create a role `GithubActionsRole` with necessary permissions <br/>
@@ -20,10 +13,7 @@ NOTE! Updated thumbnail in Endpoint verification from this link: https://github.
 Create S3 bucket `terraform-states-nikita`
 <br/>
 To understand more about how to connect Github and AWS, I've used this [article] (https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/) <br/>
-
-<br/>
-### GitHub Actions
-<br/>
+### GitHub Actions <br/>
 Create a script `.github/workflows/blank.yml` to test AWS connection <br/>
 <img width="1875" alt="Screenshot 2025-06-12 at 14 00 53" src="https://github.com/user-attachments/assets/b66a4218-b9d3-4527-8469-d5e505bd3f11" />
 <br/>
@@ -32,8 +22,8 @@ Create a script `.github/workflows/blank.yml` to test AWS connection <br/>
 
 1. **MFA User configured (10 points)**
 
-   - Screenshot of the non-root account secured by MFA (ensure sensitive information is not shared) is presented
-
+   - Screenshot of the non-root account secured by MFA (ensure sensitive information is not shared) is presented <br/>
+   <img width="1135" alt="Screenshot 2025-06-11 at 22 10 22" src="https://github.com/user-attachments/assets/4fab5c17-b323-478c-94ef-6d989630e6f3" />
 2. **Bucket and GithubActionsRole IAM role configured (20 points)**
 
    - Terraform code is created and includes:
