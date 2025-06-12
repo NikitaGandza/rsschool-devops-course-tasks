@@ -43,7 +43,10 @@ Run: <br/>
 
 3. **Github Actions workflow is created (30 points)**
 
-   - Workflow includes all jobs
+   - Workflow includes all jobs <br/>
+      File:`.github/workflows/main.yml` <br/>
+      Latest action named `terraform action` is successful
+      
 
 4. **Code Organization (10 points)**
 
