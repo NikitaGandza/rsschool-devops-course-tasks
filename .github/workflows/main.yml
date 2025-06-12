@@ -33,8 +33,7 @@ jobs:
         run: |
           aws sts get-caller-identity
 
-  terraform:
-    name: Terraform format > plan > apply
+  terraform-check:
     runs-on: ubuntu-latest
 
     steps:
