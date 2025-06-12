@@ -1,0 +1,14 @@
+name: Deploy Terraform
+
+on:
+  push:
+    branches: [ task_1 ]
+  pull_request:
+    branches: [ task_1 ]
+
+env:
+  AWS_REGION : eur-north-1
+
+permissions:
+  id-token: write
+  contents: read
