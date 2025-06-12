@@ -26,3 +26,37 @@ To understand more about how to connect Github and AWS, I've used this [article]
 <br/>
 Create a script `.github/workflows/blank.yml` to test AWS connection <br/>
 <img width="1875" alt="Screenshot 2025-06-12 at 14 00 53" src="https://github.com/user-attachments/assets/b66a4218-b9d3-4527-8469-d5e505bd3f11" />
+<br/>
+<br/>
+## Evaluation Criteria (100 points for covering all criteria)
+
+1. **MFA User configured (10 points)**
+
+   - Screenshot of the non-root account secured by MFA (ensure sensitive information is not shared) is presented
+
+2. **Bucket and GithubActionsRole IAM role configured (20 points)**
+
+   - Terraform code is created and includes:
+     - Provider initialization
+     - Creation of S3 Bucket
+
+3. **Github Actions workflow is created (30 points)**
+
+   - Workflow includes all jobs
+
+4. **Code Organization (10 points)**
+
+   - Variables are defined in a separate variables file.
+   - Resources are separated into different files for better organization.
+
+5. **Verification (10 points)**
+
+   - Terraform plan is executed successfully
+
+6. **Additional Tasks (20 points)💫**
+   - **Documentation (5 points)**
+   - Document the infrastructure setup and usage in a README file.
+   - **Submission (5 points)**
+   - A GitHub Actions (GHA) pipeline is passing
+   - **Secure authorization (10 points)**
+   - IAM role with correct Identity-based and Trust policies used to connect GitHubActions to AWS.
