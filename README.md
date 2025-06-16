@@ -1,4 +1,12 @@
-# rsschool-devops-course-tasks
+# rsschool-devops-course-tasks <br/>
+
+This is repo for RS school DevOps tasks
+## Prerequisites
+
+- [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
+- AWS free tier account.
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your local machine.
 
 ## Task 1 <br/>
 ### Install AWS CLI and Terraform <br/>
@@ -25,6 +33,35 @@ export AWS_ACCESS_KEY_ID=""
 export AWS_SECRET_ACCESS_KEY=""
 export AWS_DEFAULT_REGION=""
 ``` 
+Create a simple .tf file
+```
+provider "aws" {
+  alias  = "eu-north-1"
+  region = "eu-north-1"
+}
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.18.0"
+    }
+  }
+
+  backend "s3" {
+    bucket         = "terraform-states-nikita"
+    key            = "state/terraform.tfstate"
+    region         = "eu-north-1"
+    encrypt        = true
+    dynamodb_table = "terrform-state"
+  }
+}
+
+resource "aws_s3_bucket" "my_dummy_bucket" {
+  bucket = "dummy-bucket-nikita"
+}
+```
+
 Run: <br/>
 `terraform init` <br/>
 `terraform plan` <br/>
