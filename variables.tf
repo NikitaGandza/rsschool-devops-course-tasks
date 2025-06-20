@@ -21,3 +21,8 @@ variable "private_subnet_cidr_b" {
  description = "Private Subnet CIDR value eu-north-1b"
  default     = "10.0.4.0/24"
 }
+
+variable "aws_region" {
+ type = string
+ default = 'eu-north-1'
+}
