@@ -103,7 +103,7 @@ resource "aws_nat_gateway" "terraform-lab-ngw" {
   subnet_id     = aws_subnet.public_subnet_eur_north_1a.id
 
   tags = {
-    Name = "terraform_lab_ngw"
+    Name = "rsschool_nat_gateway"
   }
   depends_on = [aws_eip.nat_gateway]
 }
@@ -111,6 +111,12 @@ resource "aws_nat_gateway" "terraform-lab-ngw" {
 
 resource "aws_route" "public_internet_igw_route" {
   route_table_id = aws_route_table.public_route_table.id
+  gateway_id = aws_internet_gateway.rsschool_internet_gateway.id
+  destination_cidr_block = "0.0.0.0/0"
+}
+
+resource "aws_route" "nat_gateway_route" {
+  route_table_id = aws_route_table.private_route_table.id
   gateway_id = aws_internet_gateway.rsschool_internet_gateway.id
   destination_cidr_block = "0.0.0.0/0"
 }
