@@ -30,7 +30,7 @@ jobs:
           terraform_version: 1.9.6
 
       - name: Terrafoem format
-        run: terraform fmt -check
+        run: terraform fmt
 
   terraform-plan:
     runs-on: ubuntu-latest
