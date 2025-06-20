@@ -93,3 +93,10 @@ resource "aws_internet_gateway" "rsschool_internet_gateway" {
   }
   vpc_id = aws_vpc.main.id
 }
+
+
+resource "aws_route" "public_internet_igw_route" {
+  route_table_id = aws_route_table.public_route_table.id
+  gateway_id = aws_internet_gateway.rsschool_internet_gateway.id
+  destination_cidr_block = "0.0.0.0/0"
+}
