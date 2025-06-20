@@ -9,7 +9,6 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "public_subnet_eur_north_1a" {
-  count             = 1
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.public_subnet_cidr_a
   availability_zone = "eu-north-1a"
@@ -21,7 +20,6 @@ resource "aws_subnet" "public_subnet_eur_north_1a" {
 }
 
 resource "aws_subnet" "private_subnet_eur_north_1a" {
-  count             = 1
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.private_subnet_cidr_a
   availability_zone = "eu-north-1a"
@@ -33,7 +31,6 @@ resource "aws_subnet" "private_subnet_eur_north_1a" {
 }
 
 resource "aws_subnet" "public_subnet_eur_north_1b" {
-  count             = 1
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.public_subnet_cidr_b
   availability_zone = "eu-north-1b"
@@ -45,7 +42,6 @@ resource "aws_subnet" "public_subnet_eur_north_1b" {
 }
 
 resource "aws_subnet" "private_subnet_eur_north_1b" {
-  count             = 1
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.private_subnet_cidr_b
   availability_zone = "eu-north-1b"
