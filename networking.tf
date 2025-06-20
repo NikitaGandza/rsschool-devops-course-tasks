@@ -94,6 +94,20 @@ resource "aws_internet_gateway" "rsschool_internet_gateway" {
   vpc_id = aws_vpc.main.id
 }
 
+resource "aws_eip" "nat_gateway" {
+  associate_with_private_ip = "10.0.0.5"
+  depends_on                = [aws_internet_gateway.rsschool_internet_gateway]
+}
+resource "aws_nat_gateway" "terraform-lab-ngw" {
+  allocation_id = aws_eip.nat_gateway.id
+  subnet_id     = aws_subnet.public_subnet_eur_north_1a.id
+
+  tags = {
+    Name = "terraform_lab_ngw"
+  }
+  depends_on = [aws_eip.nat_gateway]
+}
+
 
 resource "aws_route" "public_internet_igw_route" {
   route_table_id = aws_route_table.public_route_table.id
