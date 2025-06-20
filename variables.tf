@@ -24,5 +24,5 @@ variable "private_subnet_cidr_b" {
 
 variable "aws_region" {
  type = string
- default = 'eu-north-1'
+ default = "eu-north-1"
 }
