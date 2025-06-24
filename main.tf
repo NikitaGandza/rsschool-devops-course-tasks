@@ -15,6 +15,6 @@ terraform {
     key            = "state/terraform.tfstate"
     region         = "eu-north-1"
     encrypt        = true
-    dynamodb_table = "terraform-state"
+    dynamodb_table = "terrform-state"
   }
 }
