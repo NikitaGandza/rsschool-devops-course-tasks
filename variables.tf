@@ -52,9 +52,9 @@ variable "ec2_instance_name" {
   default     = "terraform-lab"
 }
 
-variable "ssh_pubkey_file" {
-  description = "Path to an SSH public key"
-  default     = "~/.ssh/aws/aws_key.pub"
+variable "public_ssh_key" {
+  description = "The public key for the EC2 key pair"
+  type        = string
 }
 
 variable "autoscale_min" {
