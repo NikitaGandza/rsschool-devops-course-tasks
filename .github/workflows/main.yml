@@ -4,9 +4,9 @@ name: Connect to an AWS role from a GitHub repository
 
 on:
   push:
-    branches: [ main, task_2 ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, task_2 ]
+    branches: [ main ]
 
 env:
   TF_VAR_public_ssh_key: ${{ secrets.TF_VAR_PUBLIC_SSH_KEY }}

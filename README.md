@@ -8,6 +8,8 @@ This is repo for RS school DevOps tasks
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your local machine.
 
+## Task 3 <br/>
+
 ## Task 1 <br/>
 ### Install AWS CLI and Terraform <br/>
 AWS and Terraform versions <br/>
